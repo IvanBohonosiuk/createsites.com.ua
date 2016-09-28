@@ -11,7 +11,8 @@ class AuthController extends Controller
 {
     public function getRegisterPage()
     {
-        return view('auth.register');
+        // return view('auth.register');
+        return redirect()->back();
     }
     
     public function getLoginPage()
