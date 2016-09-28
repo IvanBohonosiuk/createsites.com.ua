@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Role;
 use Illuminate\Http\Request;
+use App\Role;
+use App\User;
+use App\Projects;
+use App\ProjectCat;
 
 class AppController extends Controller
 {
-    public function getIndex()
+    public function getIndex(Projects $projects, ProjectCat $project_cat)
     {
-        return view('index');
+        $this->data['projects'] = $projects->getActive();
+        $this->data['project_cat'] = $project_cat->getActive();
+
+        return view('index', $this->data);
     }
     
     public function getAuthorPage()
@@ -24,11 +29,6 @@ class AppController extends Controller
         return view('admin', ['users' => $users]);
     }
 
-    public function getGenerateArticle()
-    {
-        return response('Article generated!', 200);
-    }
-    
     public function postAdminAssignRoles(Request $request)
     {
         $user = User::where('email', $request['email'])->first();

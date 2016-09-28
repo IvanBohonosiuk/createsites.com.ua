@@ -66,7 +66,13 @@ return array(
 	 *	)
 	 */
 	'menu' => [
-		'users'
+		'Користувачі' => [
+			'users'
+		],
+		'Проекти' => [
+			'projects',
+			'project_cat'
+		]
 	],
 
 	/**

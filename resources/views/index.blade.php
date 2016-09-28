@@ -219,34 +219,35 @@
 
 
     <div id="isotope-filter" class="skew3 text-center">
-        <a data-filter="*"  href="#" class="active ">All</a>
-        <a data-filter=".identity"  href="#" class="">Identity</a>
-        <a data-filter=".web-design" href="#"  class="">Web Design</a>
-        <a data-filter=".graphic"  href="#" class="">Graphic</a>
-        <a data-filter=".logo"  href="#" class="">Photography</a>
+        <a data-filter="*"  href="#" class="">Все</a>
+        @foreach ($project_cat as $item)
+            <a data-filter=".{{ $item->slug }}"  href="#" class="">{{ $item->title }}</a>
+        @endforeach
     </div>
     <div class="clearfix"></div>
    			<div class="text-center ">
               <ul class="portfolio-wrap" id="portfolio_items">
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio identity web-design">
+                @foreach ($projects as $project)
+                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio @foreach ($project->categories as $element) {{ $element->slug }} @endforeach">
                         <figure>
-                            <img src="img/portfolio/p1.jpg" alt="" />
+                            <img src="/img/projects/medium/{{ $project->image }}" alt="" />
                             <figcaption>
-                                <h5>Creative Zoe</h5>
+                                <h5>{{ $project->name }}</h5>
                                 <p class="links">
                                     <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p1.jpg" data-rel="prettyPhoto" class="img-responsive">
+                                    <a href="/img/projects/originals/{{ $project->image }}" data-rel="prettyPhoto" class="img-responsive">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </p>
                                 <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    {!! $project->description !!}
                                 </p>
                             </figcaption>
                         </figure>
                     </li>
+                @endforeach
 
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio logo graphic">
+                    {{-- <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio logo graphic">
                         <figure>
                         <img src="img/portfolio/p2.jpg" alt="" />
                             <figcaption>
@@ -370,7 +371,7 @@
                                 </p>
                             </figcaption>
                         </figure>
-                    </li>
+                    </li> --}}
 
                 </ul>
         </div> <!-- Container Full End -->

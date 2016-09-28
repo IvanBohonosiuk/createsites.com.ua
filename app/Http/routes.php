@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('main');
+Route::get('/', [
+    'uses' => 'AppController@getIndex',
+    'as' => 'main'
+]);
 
 Route::get('/register', [
     'uses' => 'AuthController@getRegisterPage',
