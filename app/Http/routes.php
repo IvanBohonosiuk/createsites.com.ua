@@ -40,3 +40,8 @@ Route::get('/logout', [
     'uses' => 'AuthController@getLogout',
     'as' => 'logout'
 ]);
+
+Route::post('/send_mail', [
+    'uses' => 'AppController@sendMail',
+    'as' => 'mail.send'
+]);

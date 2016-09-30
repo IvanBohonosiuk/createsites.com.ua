@@ -666,9 +666,24 @@ padding: 10px 15px;
     padding-top: 50px;
     text-align: left;
 }
+
+.single-portfolio figcaption .description p {
+    color: #fff;
+}
+
+.single-portfolio figcaption .description a {
+    color: #fff;
+}
+
+.single-portfolio figcaption .description a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
 .single-portfolio figcaption h5,.single-portfolio figcaption p{
     margin: 10px 0px;
 }
+
 .single-portfolio figcaption h5{
     float: left;
 }
@@ -1376,8 +1391,8 @@ padding: 8px 15px;
     text-transform:uppercase;
     text-align:center;
     letter-spacing:2px;
-    font-size: 20px; 
-    line-height:18px;
+    font-size: 18px; 
+    line-height:16px;
     color: #fff!important;
     margin-top: 15px;
 }

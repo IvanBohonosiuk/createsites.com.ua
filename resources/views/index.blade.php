@@ -19,9 +19,9 @@
            	 		<div class="carousel-caption">
                	 		<div class="col-md-12 col-xs-12 text-center">
                       <h2>Create Sites</h2>
-               	 			<h3 class="animated2"> <b>Creative</b> Modern and clean </h3>
+               	 			<h3 class="animated2"> <b>Творчески</b> Современно и чисто </h3>
                	 			<div class="line"></div>
-               	 			<p class="animated3">Unique clean design</p>
+               	 			<p class="animated3">Уникальный чистый дизайн</p>
                	 		</div>
            	 		</div>
            	 	</div>
@@ -32,9 +32,9 @@
            	 		<div class="carousel-caption">
                	 		<div class="col-md-12 col-xs-12 text-center">
                     <h2>Create Sites</h2>
-               	 			<h3 class="animated3"> responsive <b>Flat </b>design</h3>
+               	 			<h3 class="animated3"> <b>отзывчивый</b> дизайн</h3>
                	 			<div class="line"></div>
-               	 			<p class="animated2">best choice for you</p>
+               	 			<p class="animated2">лучший выбор для Вас</p>
                	 		</div>
            	 		</div>
            	 	</div>
@@ -45,9 +45,9 @@
            	 		<div class="carousel-caption">
                	 		<div class="col-md-12 col-xs-12 text-center">
                     <h2>Create Sites</h2>
-               	 			<h3 class="animated3"> We're crazy <b>coders</b></h3>
+               	 			<h3 class="animated3"> Мы сумасшедшие <b>кодеры</b></h3>
                	 			<div class="line"></div>
-               	 			<p class="animated2"> way to success</p>
+               	 			<p class="animated2"> путь к успеху</p>
                	 		</div>
            	 		</div>
            	 	</div>
@@ -228,7 +228,7 @@
    			<div class="text-center ">
               <ul class="portfolio-wrap" id="portfolio_items">
                 @foreach ($projects as $project)
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio @foreach ($project->categories as $element) {{ $element->slug }} @endforeach">
+                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio @foreach ($project->categories as $element) {{ $element->slug }} @endforeach" style="height: 325px;">
                         <figure>
                             <img src="/img/projects/medium/{{ $project->image }}" alt="" />
                             <figcaption>
@@ -239,146 +239,110 @@
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </p>
-                                <p class="description">
+                                <div class="description">
                                     {!! $project->description !!}
-                                </p>
+                                </div>
                             </figcaption>
                         </figure>
                     </li>
                 @endforeach
-
-                    {{-- <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio logo graphic">
-                        <figure>
-                        <img src="img/portfolio/p2.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p2.jpg"  data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                                </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio graphic logo">
-                        <figure>
-                            <img src="img/portfolio/p3.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p3.jpg" data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio web-design identity">
-                        <figure>
-                            <img src="img/portfolio/p7.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p7.jpg" data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio logo web-design">
-                        <figure>
-                            <img src="img/portfolio/p5.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p5.jpg" data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio logo graphic">
-                        <figure>
-                            <img src="img/portfolio/p6.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p6.jpg" data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio graphic identity">
-                        <figure>
-                            <img src="img/portfolio/p3.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p3.jpg" data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="col-xs-12 col-sm-6 col-md-4 single-portfolio web-design graphic">
-                        <figure>
-                            <img src="img/portfolio/p7.jpg" alt="" />
-                            <figcaption>
-                                <h5>Creative Zoe</h5>
-                                <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                                    <a href="img/portfolio/p7.jpg" data-rel="prettyPhoto" class="img-responsive">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </p>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </li> --}}
-
                 </ul>
         </div> <!-- Container Full End -->
 </section>  <!-- Portfolio Section End -->
 
 <div class="clearfix"></div>
 
+
+
+<!-- Counter Strat -->
+
+<section id="counter_area">
+        <div class="facts">
+            <div class="container">
+                <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                    <div class="facts-wrap">
+                     <div class="graph">
+                        <div class="graph-left-side">
+                            <div class="graph-left-container">
+                                <div class="graph-left-half"> </div>
+                            </div>
+                        </div>
+                        <div class="graph-right-side">
+                            <div class="graph-right-container">
+                                <div class="graph-right-half"></div>
+                            </div>
+                        </div>
+                        <i class="fa fa-thumbs-o-up fa-3x fw"></i>
+                        <div class="facts-wrap-num">
+                            <span class="counter">67</span>
+                        </div>
+                    </div>
+                        <h6>Клиентов</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                    <div class="facts-wrap">
+                     <div class="graph">
+                        <div class="graph-left-side">
+                            <div class="graph-left-container">
+                                <div class="graph-left-half"> </div>
+                            </div>
+                        </div>
+                        <div class="graph-right-side">
+                            <div class="graph-right-container">
+                                <div class="graph-right-half"></div>
+                            </div>
+                        </div>
+                        <i class="fa fa-clock-o fa-3x fw"></i>
+                        <div class="facts-wrap-num"><span class="counter">250</span></div>
+                     </div>
+                        <h6>Часов работы</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                    <div class="facts-wrap">
+                     <div class="graph">
+                        <div class="graph-left-side">
+                            <div class="graph-left-container">
+                                <div class="graph-left-half"> </div>
+                            </div>
+                        </div>
+                        <div class="graph-right-side">
+                            <div class="graph-right-container">
+                                <div class="graph-right-half"></div>
+                            </div>
+                        </div>
+                        <i class="fa fa-check-square-o fa-3x fw"></i>
+                        <div class="facts-wrap-num"><span class="counter">76</span></div>
+                        </div>
+                        <h6>Проэктов</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                    <div class="facts-wrap">
+                     <div class="graph">
+                        <div class="graph-left-side">
+                            <div class="graph-left-container">
+                                <div class="graph-left-half"> </div>
+                            </div>
+                        </div>
+                        <div class="graph-right-side">
+                            <div class="graph-right-container">
+                                <div class="graph-right-half"></div>
+                            </div>
+                        </div>
+                        <i class="fa fa-coffee fa-3x fw"></i>
+                        <div class="facts-wrap-num"><span class="counter">167</span></div>
+                        </div>
+                        <h6>Чашек кофе</h6>
+                    </div>
+                </div>
+            </div> <!-- Conatainer End -->
+        </div>  <!-- Fact div ENd -->
+</section>
+<!-- Counter End -->
+
+<div class="clearfix"></div>
 <!-- About us start -->
 <section id="about">
     <div class="container">
@@ -401,97 +365,6 @@
     </div>
 </section>
 <!-- About us End -->
-
-
-<!-- Counter Strat -->
-
-<section id="counter_area">
-        <div class="facts">
-            <div class="container">
-                <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                    <div class="facts-wrap">
-                     <div class="graph">
-                        <div class="graph-left-side">
-                        	<div class="graph-left-container">
-                        		<div class="graph-left-half"> </div>
-                        	</div>
-                        </div>
-                        <div class="graph-right-side">
-                        	<div class="graph-right-container">
-                        		<div class="graph-right-half"></div>
-                        	</div>
-                        </div>
-                        <i class="fa fa-thumbs-o-up fa-3x fw"></i>
-                        <div class="facts-wrap-num">
-                            <span class="counter">67</span>
-                        </div>
-                    </div>
-                        <h6>Клиентов</h6>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                    <div class="facts-wrap">
-                     <div class="graph">
-                        <div class="graph-left-side">
-                        	<div class="graph-left-container">
-                        		<div class="graph-left-half"> </div>
-                        	</div>
-                        </div>
-                        <div class="graph-right-side">
-                        	<div class="graph-right-container">
-                        		<div class="graph-right-half"></div>
-                        	</div>
-                        </div>
-                        <i class="fa fa-gift fa-3x fw"></i>
-                        <div class="facts-wrap-num"><span class="counter">25</span></div>
-                     </div>
-                        <h6>Подарков</h6>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                    <div class="facts-wrap">
-                     <div class="graph">
-                        <div class="graph-left-side">
-                        	<div class="graph-left-container">
-                        		<div class="graph-left-half"> </div>
-                        	</div>
-                        </div>
-                        <div class="graph-right-side">
-                        	<div class="graph-right-container">
-                        		<div class="graph-right-half"></div>
-                        	</div>
-                        </div>
-                        <i class="fa fa-check-square-o fa-3x fw"></i>
-                        <div class="facts-wrap-num"><span class="counter">76</span></div>
-                        </div>
-                        <h6>Проэктов</h6>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                    <div class="facts-wrap">
-                     <div class="graph">
-                        <div class="graph-left-side">
-                        	<div class="graph-left-container">
-                        		<div class="graph-left-half"> </div>
-                        	</div>
-                        </div>
-                        <div class="graph-right-side">
-                        	<div class="graph-right-container">
-                        		<div class="graph-right-half"></div>
-                        	</div>
-                        </div>
-                        <i class="fa fa-envelope-o fa-3x fw"></i>
-                        <div class="facts-wrap-num"><span class="counter">46</span></div>
-                        </div>
-                        <h6>Листов</h6>
-                    </div>
-                </div>
-            </div> <!-- Conatainer End -->
-        </div>	<!-- Fact div ENd -->
-</section>
-<!-- Counter End -->
-
-<div class="clearfix"></div>
 
 <!-- Pricing Table Start -->
 <section id="pricing_table" class="pricing_overlay">
@@ -649,34 +522,59 @@
   			</div>
         </div>
         <div class="row">
-             <div class="contact_full">
-                <div class="col-md-6 left">
+             <div class="contact_full col-md-9" style="margin: 0;">
+                <h3 class="menu_head" style="color: #000 !important;">Напишите нам</h3>
+                <form action="{{ route('mail.send') }}" method="post">
+                  <div class="col-md-6 left">
                     <div class="left_contact">
-                        <form action="role">
-                            <div class="form-level">
-                                <input name="name" placeholder="Name" id="name"  value="" type="text" class="input-block">
-                                <span class="form-icon fa fa-user"></span>
-                            </div>
-                            <div class="form-level">
-                                <input name="email" placeholder="Email" id="mail" class="input-block" value="" type="email">
-                                <span class="form-icon fa fa-envelope-o"></span>
-                            </div>
-                            <div class="form-level">
-                                <input name="name" placeholder="Phone" id="phone" class="input-block" value="" type="text">
-                                <span class="form-icon fa fa-phone"></span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                          <div class="form-level">
+                              <input name="name" placeholder="Имя" id="name"  value="" type="text" class="input-block">
+                              <span class="form-icon fa fa-user"></span>
+                          </div>
+                          <div class="form-level">
+                              <input name="email" placeholder="E-mail" id="email" class="input-block" value="" type="email">
+                              <span class="form-icon fa fa-envelope-o"></span>
+                          </div>
+                          <div class="form-level">
+                              <input name="phone" placeholder="Телефон" id="phone" class="input-block" value="" type="text">
+                              <span class="form-icon fa fa-phone"></span>
+                          </div>
+                      </div>
+                  </div>
 
-                <div class="col-md-6 right">
-                    <div class="form-level">
-                        <textarea name="" id="messege"  rows="5" class="textarea-block" placeholder="message"></textarea>
-                        <span class="form-icon fa fa-pencil"></span>
-                    </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    <button class="btn btn-main featured">Отправить сейчас</button>
+                  {{-- <div class="col-md-6 right"> --}}
+                      {{-- <div class="form-level"> --}}
+                          {{-- <textarea name="message" id="message"  rows="5" class="textarea-block" placeholder="Сообщение"></textarea> --}}
+                          {{-- <span class="form-icon fa fa-pencil"></span> --}}
+                      {{-- </div> --}}
+                  {{-- </div> --}}
+                  <div class="col-md-12 text-center">
+                      {{ csrf_field() }}
+                      <input type="submit" class="btn btn-main featured" value="Отправить сейчас">
+                  </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+                <h3 class="menu_head" style="color: #000 !important;">Контакты</h3>
+                <div class="footer_menu_contact">
+                    <ul>
+                        <li> 
+                            <i class="fa fa-map-marker"></i>
+                            <span> Ивано-Франковск, Украина </span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span> +38 097 800 9543</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <a href="mailto:admin@createsites.com.ua"> admin@createsites.com.ua</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-globe"></i>
+                            <span> www.createsites.com.ua</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

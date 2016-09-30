@@ -1,7 +1,7 @@
 <!-- Footer Area Start -->
 
 <section id="footer">
-    <div class="footer_top">
+    {{-- <div class="footer_top">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -70,7 +70,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="footer_b">
         <div class="container">

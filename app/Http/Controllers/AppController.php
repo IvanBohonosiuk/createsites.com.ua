@@ -7,6 +7,7 @@ use App\Role;
 use App\User;
 use App\Projects;
 use App\ProjectCat;
+use Mail;
 
 class AppController extends Controller
 {
@@ -42,6 +43,23 @@ class AppController extends Controller
         if ($request['role_admin']) {
             $user->roles()->attach(Role::where('name', 'Admin')->first());
         }
+        return redirect()->back();
+    }
+
+    public function sendMail(Request $request)
+    {   
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        // $message = $request->message;
+
+        Mail::send('emails.welcome',['name'=>$name, 'email'=>$email, 'phone'=>$phone/*, 'message'=>$message*/],function($message)
+        {
+            $message->from('The.head1993@gmail.com');
+            $message->to('admin@createsites.com.ua');
+            $message->subject('Письмо от пользователя сайта createsites.com.ua');
+        });
+
         return redirect()->back();
     }
 }
