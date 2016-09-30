@@ -8,13 +8,15 @@ use App\User;
 use App\Projects;
 use App\ProjectCat;
 use Mail;
+use App\Reviews;
 
 class AppController extends Controller
 {
-    public function getIndex(Projects $projects, ProjectCat $project_cat)
+    public function getIndex(Projects $projects, ProjectCat $project_cat, Reviews $reviews)
     {
         $this->data['projects'] = $projects->getActive();
         $this->data['project_cat'] = $project_cat->getActive();
+        $this->data['reviews'] = $reviews->getActive();
 
         return view('index', $this->data);
     }

@@ -67,7 +67,8 @@ return array(
 	 */
 	'menu' => [
 		'Користувачі' => [
-			'users'
+			'users',
+			'reviews'
 		],
 		'Проекти' => [
 			'projects',

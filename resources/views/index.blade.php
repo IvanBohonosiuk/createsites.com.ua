@@ -458,20 +458,23 @@
         </div>
                 <div class="row">
                     <div id="testimonial-carousel" class="owl-carousel owl-theme text-center testimonial-slide">
+                      @foreach ($reviews as $review)
                         <div class="item">
-                          <div class="testimonial-thumb">
-                            {{-- <img class="img-circle" src="images/team/pic1.jpg" alt="testimonial" > --}}
-                          </div>
+                          @if ($review->image != '')
+                            <div class="testimonial-thumb">
+                              <img class="img-circle" src="/img/reviews/medium/{{ $review->image }}" alt="testimonial" >
+                            </div>
+                          @endif
                           <div class="testimonial-content">
-                            <h3 class="name">Katee Nureen <span>Exectuive Director</span></h3>
-                            <p class="testimonial-text">
-                              iLorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.
-                            </p>
+                            <h3 class="name">{{ $review->name }}</h3>
+                            <div class="testimonial-text">
+                              {{ $review->text }}
+                            </div>
                           </div>
                         </div>
-                        <div class="item">
+                      @endforeach
+                        {{-- <div class="item">
                           <div class="testimonial-thumb">
-                            {{-- <img class="img-circle" src="images/testimonial2.png" alt="testimonial" >  --}}
                           </div>
                           <div class="testimonial-content">
                           	<h3 class="name">Angry Figer <span>Frozen Director</span></h3>
@@ -482,7 +485,6 @@
                         </div>
                         <div class="item">
                           <div class="testimonial-thumb">
-                            {{-- <img class="img-circle" src="images/team/pic6.jpg" alt="testimonial" > --}}
                           </div>
                           <div class="testimonial-content">
                           	<h3 class="name wow bounceInLeft">Monica Lunaxy<span>Sales Manager</span></h3>
@@ -490,7 +492,7 @@
                               Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.
                             </p>
                           </div>
-                        </div>
+                        </div> --}}
                     </div>
                   	<!-- Navigation start -->
                   	<div class="customNavigation cyprass-carousel-controller">
