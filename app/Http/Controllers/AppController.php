@@ -20,6 +20,13 @@ class AppController extends Controller
 
         return view('index', $this->data);
     }
+
+    public function singlePortfolio($id, Projects $project)
+    {
+        $this->data['project'] = $project->getById($id);
+        
+        return view('singlePorfolio', $this->data);
+    }
     
     public function getAuthorPage()
     {

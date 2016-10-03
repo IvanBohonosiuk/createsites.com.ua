@@ -5,7 +5,7 @@
     <div class="container" style="margin-top: 100px; margin-bottom: 10px;">
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('login') }}" method="post">
+                <form action="{{ route('login.post') }}" method="post">
                     <div class="form-group">
                         <label for="email">E-Mail</label>
                         <input type="email" class="form-control" id="email" name="email">

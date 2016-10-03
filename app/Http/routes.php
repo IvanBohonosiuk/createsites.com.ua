@@ -16,6 +16,11 @@ Route::get('/', [
     'as' => 'main'
 ]);
 
+Route::get('/project/{id}', [
+    'uses' => 'AppController@singlePortfolio',
+    'as' => 'project.item'
+]);
+
 Route::get('/register', [
     'uses' => 'AuthController@getRegisterPage',
     'as' => 'register'
@@ -33,7 +38,7 @@ Route::get('/login', [
 
 Route::post('/login', [
     'uses' => 'AuthController@postLogin',
-    'as' => 'login'
+    'as' => 'login.post'
 ]);
 
 Route::get('/logout', [

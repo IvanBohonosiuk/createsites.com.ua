@@ -234,7 +234,7 @@
                             <figcaption>
                                 <h5>{{ $project->name }}</h5>
                                 <p class="links">
-                                    <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
+                                    <a href="{{ route('project.item', $project->id) }}"> <i class="fa fa-link"></i></a>
                                     <a href="/img/projects/originals/{{ $project->image }}" data-rel="prettyPhoto" class="img-responsive">
                                         <i class="fa fa-plus"></i>
                                     </a>
@@ -473,26 +473,6 @@
                           </div>
                         </div>
                       @endforeach
-                        {{-- <div class="item">
-                          <div class="testimonial-thumb">
-                          </div>
-                          <div class="testimonial-content">
-                          	<h3 class="name">Angry Figer <span>Frozen Director</span></h3>
-                            <p class="testimonial-text">
-                              Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="item">
-                          <div class="testimonial-thumb">
-                          </div>
-                          <div class="testimonial-content">
-                          	<h3 class="name wow bounceInLeft">Monica Lunaxy<span>Sales Manager</span></h3>
-                            <p class="testimonial-text">
-                              Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.
-                            </p>
-                          </div>
-                        </div> --}}
                     </div>
                   	<!-- Navigation start -->
                   	<div class="customNavigation cyprass-carousel-controller">
