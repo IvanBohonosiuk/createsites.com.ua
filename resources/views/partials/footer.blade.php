@@ -150,7 +150,7 @@
 
 <!-- Back To Top Button -->
 <div id="back-top">
-    <a href="#slider_part" class="scroll" data-scroll>
+    <a href="#" class="scroll" data-scroll>
         <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-up"></i></button>
     </a>
 </div>
